@@ -1,0 +1,245 @@
+html,body,h1{
+   margin: 0px; 
+   padding: 0px;
+}
+
+@font-face {
+    font-family: norse;
+    src: url(Norse-Bold.otf);
+}
+
+@font-face {
+    font-family: montserrat;
+    src: url(Montserrat-VariableFont_wght.ttf);
+}
+
+.sidebar{
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding-bottom: 8px;
+    justify-content: center;
+    background-color: rgba(99, 81, 81, 0.2);
+    font-family: norse,system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    color: #f5f1f1;
+    font-size: 2rem;
+}
+
+.bar{
+    padding: 120px 0px 0px 0px;
+}
+
+.logo{
+    width: 10vw;
+    height: auto;
+}
+
+.background{
+    width: 65vh;
+    height:100vh;
+    background-position: right ;
+    background-image: url(room.jpg);
+    background-size: 100vh 100vh;
+}
+
+fieldset{
+    border: none;
+}
+
+
+
+body{
+    border-left: 300px solid black;
+    border-right: 300px solid black;
+    display: flex;
+    align-items: center;
+}
+
+[type="checkbox"]{
+    width: 15px;  
+    height: 15px;
+    accent-color: #74992e;
+}
+
+.content{
+    width: 100vh;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    gap: 36px;
+    justify-content: center;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    padding-left: 36px;
+    gap: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+fieldset{
+    display: flex;
+    gap: 54px;
+    padding-top: 8px;
+    padding-bottom: 16px;
+}
+
+.select,
+.gender{
+    padding-top: 8px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+input{
+    font-size: 16px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.try{
+    display: flex;
+    flex-direction: column;
+}
+
+.box{
+    width: 250px;
+    height: 25px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+p{
+    color: #413f3f;
+    font-size: 20px;
+    line-height: 1.5;
+    padding-left: 50px;
+    padding-bottom: 40px;
+    margin: 0px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+label.in{
+    font-size: 13px;
+    font-weight:490;
+    color: #5a5858;
+    font-family: montserrat,system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";;
+    text-transform: uppercase;
+}
+
+.gender label{
+    padding-top: 4px;
+}
+
+select{
+    width: 100px;
+    height: 30px;
+    font-size: 12px;
+    border-radius: 5px;
+    color: #6c6767;
+    border: 1px solid #a49b9b;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+.out{
+    color: #6d6767;
+    font-size: 14px;
+    font-weight: 550;
+    font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    text-transform: uppercase;
+
+}
+
+button{
+    margin-left: 48px;
+    width: 300px;
+    height: 35px;
+    border: 1px solid #686464;
+    border-radius: 4px;
+    font-size: 16px;
+    width: 130px;
+    height: 35px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: 400;
+    opacity: 0.7;
+    background: plum;
+    
+}
+
+.special{
+    padding-bottom: 18px;
+}
+
+.conditions{
+    width: 100%;
+    height: auto;
+    color: #5b5656;
+    font-size: 16px;
+    padding-top: 8px;
+    padding-left: 12px; 
+    font-weight: 550;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+button:hover{
+    background: rgb(207, 132, 245);
+    border: 2px solid rgb(64, 60, 60);
+    opacity: 1;
+}
+
+a{
+    text-decoration: none;
+    color: olivedrab;
+}
+
+.out::first-letter{
+    font-size: 18px;
+}
+
+input:user-invalid{
+    border: 1px solid rgb(205, 3, 3);
+}
+
+input[type="email"]:user-invalid + span::after{
+    content: "*Enter a valid email";
+    color: red;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 13px;
+    padding-left: 2px;
+    padding-top: 2px;
+}
+
+input[type="password"]:user-invalid + span::after{
+    content: "*Enter 8-10 characters and atleast 1 number";
+    color: red;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 13px;
+    padding-left: 2px;
+    padding-top: 2px;
+}
+
+input[id="confirm_password"]:user-invalid + span::after{
+    content: "*password doesn't match";
+    color: red;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 13px;
+    padding-left: 2px;
+    padding-top: 2px;
+}
+
+input:focus{
+    outline: none;
+    border: 1px solid rgb(6, 154, 246);
+    border-radius: 4px;
+    box-shadow: 2px 2px 10px rgb(185, 184, 184);
+}
+
+
+
+
+
+
+

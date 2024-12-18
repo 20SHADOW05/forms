@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Forms</title>
+    <link rel="icon" href="document.png">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="image">
+        <div class="background">
+            <div class="bar">
+                <div class="sidebar">
+                    <img class="logo" src="last-removebg.png" alt="phoenix">
+                    <h1>PHOENIX</h1>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="content">
+        <p>Complete the form accurately with all required details to ensure a smooth process. Your information will be handled securely and used solely for organizational purposes. Reach out if you have any questions. Thank you!</p>
+        <form id="mistake" action="https://httpbin.org/post" method="post">
+            <!-- button is outside the form, made a mistake. so now give an id in form and use it link the form to the button -->
+            <fieldset>
+                <div class="try"><label class="in" for="first_name">First Name  </label>
+                <input class="box" title="required" type="text" pattern="^[A-Za-z\s]+$" id="first_name" name="first_name" required></div>
+
+                <div class="try"><label class="in" for="last_name">Last Name  </label>
+                <input class="box" type="text" pattern="^[A-Za-z\s]+$" id="last_name" name="last_name" required></div>
+            </fieldset>
+
+            <fieldset>
+                <div class="try"><label class="in" for="email">Email  </label>
+                <input class="box" pattern="^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$" type="email" id="email" name="email" required>
+                <span></span></div>
+
+                <div class="try"><label class="in" for="phone_number">Phone Number  </label>
+                <input class="box" type="number" pattern="^\d{10}$" id="phone_number" name="phone_number" required></div>
+            </fieldset>
+
+            <fieldset>
+                <div class="try"><label class="in" for="password">Password  </label>
+                <input class="box" pattern="^(?=.*\d)[A-Za-z\d]{8,10}$" minlength="9" maxlength="11"  type="password" id="email" name="email" required><span></span></div>
+                
+
+                <div class="try"><label class="in" for="confirm_password">Confirm Password  </label>
+                <input class="box" pattern="^(?=.*\d)[A-Za-z\d]{8,10}$" minlength="9" maxlength="11" type="password" id="confirm_password" name="confirm_password" required><span></span></div>
+            </fieldset>
+            
+            <fieldset >
+                <div class="select">
+                    <label class="out" for="subscription_plan">Subscription Plan : </label>
+                    <select name="subscription_plan" id="subscription_plan">
+                        <option value="Starter">Starter</option>
+                        <option value="Advanced">Advanced</option>
+                        <option value="Elite">Elite</option>
+                    </select>
+                </div>
+
+                <div class="gender">
+                    <input type="radio" id="male" name="Gender" value="male" required>
+                    <label class="out" for="male">Male</label>
+
+                    <input type="radio" id="female" name="Gender" value="female">
+                    <label class="out" for="female">Female</label>
+
+                    <input type="radio" id="Prefer_not_to_say" name="Gender" value="Prefer_not_to_say" checked>
+                    <label class="out" for="Prefer_not_to_say">Rather not say</label>
+                </div>
+            </fieldset>
+
+            <div class="conditions">
+                <input type="checkbox" id="conditions" name="conditions" value="conditions">
+                <label for="conditions"> Confirm that you have read and agree to our <a href="#">Terms of Service</a> and <a href="#">Privacy Policy</a>.</label>
+            </div>
+
+            <div class="conditions special">
+                <input type="checkbox" id="updates" name="updates" value="updates">
+                <label for="updates">I agree to receive updates, promotions, and newsletters via email.</label>
+            </div>
+        </form>
+        <div class="btn"><button form="mistake" type="submit">Create Account</button></div>
+        <p class="exists">Already have an account ? <a href="#">Log In</a></p>
+    </div>
+</body>
+</html>
